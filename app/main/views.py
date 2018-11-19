@@ -11,11 +11,10 @@ def index():
     '''
     View root page function that returns the index page and its data
     '''
-    blogs = Blog.query.all()
-    comments = Comment.query.all()
+    
     title = 'Home of Awesome Blogs'
 
-    return render_template('index.html',comments = comments,blogs = blogs,title=title)
+    return render_template('index.html',title=title)
 
 @main.route('/user/<uname>')
 def profile(uname):

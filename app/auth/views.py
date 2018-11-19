@@ -1,7 +1,7 @@
 from flask import render_template,redirect,url_for,request,flash
 from flask_login import current_user,login_user,logout_user,login_required
 from . import auth
-from ..models import User,Blog,Comment,Category,Subscribe
+from ..models import User
 from .forms import RegistrationForm,LoginForm
 from .. import db
 # from ..email import mail_message
@@ -14,6 +14,7 @@ def register():
         user = User(email = form.email.data, username = form.username.data,password = form.password.data)
         db.session.add(user)
         db.session.commit()
+
 
         return redirect(url_for('auth.login'))
         title = "New Account"
