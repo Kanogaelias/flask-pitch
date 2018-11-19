@@ -7,7 +7,7 @@ class UserModelTest(unittest.TestCase):
         '''
         set up will run before every test
         '''
-        self.new_user = User(id = 1, username = "Gift", email = "iamtesting@gift.com", password_hash = "hashed_password")
+        self.new_user = User(id = 1, username = "Elias", email = "kanogae@gmail.com", password_hash = "hashed_password")
 
     def test_instance(self):
         '''
