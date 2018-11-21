@@ -5,7 +5,6 @@ from app.models import User,Role,Blog,Comment,Category,Subscribe
 from  flask_migrate import Migrate, MigrateCommand
 
 # Creating app instance
-# app = create_app('development')
 app = create_app('production')
 
 
