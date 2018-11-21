@@ -5,7 +5,7 @@ Flask blog application was created on 18th November 2018.
 ELIAS KANOGA
 
 ## Link to Deployed Site on Heroku
-
+https://kanoga-blog.herokuapp.com/
 
 ## Description
 My blog app eneables users to comment to inspirational stuff and also subscribe to new posts whereby they will receive alerts
