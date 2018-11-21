@@ -19,14 +19,14 @@ class Config:
     MAIL_USER_TLS = True
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
-
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://kanoga:mikedad@localhost/pitch'
 
 class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 
 class DevConfig(Config):
-    # SQLALCHEMY_DATABASE_URI=''postgresql+psycopg2://kanoga:mikedad@localhost/blog''
+    
 
     DEBUG = True
 
@@ -39,5 +39,5 @@ class TestConfig(Config):
 config_options = {
 'development':DevConfig,
 'production':ProdConfig,
-# 'test':TestConfig
+'test':TestConfig
 }
